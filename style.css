@@ -145,7 +145,6 @@ blockquote:before {
     position: absolute;
     left: 362px;
     top: 596px;
-    z-index: -1;
 }
 
 blockquote::after {
@@ -156,7 +155,6 @@ blockquote::after {
     position: absolute;
     right: 335px;
     top: 596px;
-    z-index: -1;
 }
 
 blockquote p {
