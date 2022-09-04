@@ -1,53 +1,574 @@
+html {
+    scroll-behavior:smooth;
+}
+
 body {
     margin: 0;
-  }
-  
-.title {
-    background: -webkit-linear-gradient(#E55D87 0%, #5FC3E4  51%, #E55D87  100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-align: center;
-    margin-top: -35px;
-    
+    padding: 0;
 }
 
 .header {
-    margin: 0;
-    padding: 0;
-    background-color: #333;
     position: fixed;
     width: 100%;
     height: 50px;
-    position: fixed;
+    background: #212121;
+    z-index: 2;
+    top: 0;
 } 
 
-#button {
-    cursor: pointer;
+h1 {
+    margin: 50px;
+    margin-top: 1px;
+    float: left;
+    font-family: cursive;
+    background-image: linear-gradient(to right, #E55D87 0%, #5FC3E4  51%, #E55D87  100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2 {
+    margin-top: 50px;
+}
+
+.navbar {
+    text-transform: uppercase;
+    line-height: 18px;
+    height: 50px;
+    float: right;
+    
+}
+
+li { 
+    display:inline-block; 
+    margin:0;
+    text-transform:uppercase;
+}
+
+li:after {
+    display: block;
+    content: '';
+    border-bottom: 1px solid aqua;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+}
+
+li:hover::after { 
+    transform: scaleX(1); 
+}
+
+.button {
     text-decoration: none;
     background-image: linear-gradient(to right, #E55D87 0%, #5FC3E4  51%, #E55D87  100%);
-    width: 50px;
-    text-align: center;
-    border-radius: 10px;
-    margin-top: 8px;
-    margin: 5px;
-    box-shadow: 0 7px #BDBDBD;
-    padding: 5px 15px;
-    font-size: 15px;
-    margin-left: 94%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: cursive;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 20px;
     transition: 0.5s;
     background-size: 200% auto;
 }
 
-#button a {
-    text-decoration: none;
-    color: #000;
-}
-
-#button:hover {
+.button:hover {
     background-position: right center;
 }
 
-#button:active {
-    box-shadow: 0 5px #BDBDBD;
-    transform: translateY(10px);
+.my-photo {
+    position: relative;
+    border-radius: 50%;
+    height: 180px;
+    width: 180px;
+    padding: 0;
+    margin-top: 300px;
+    object-fit: cover;
+    z-index: -1;
+    margin-left: 700px;
+    margin-top: 150px;
 }
+
+ .h2 {
+    font-size: 50px;
+    background: #19CFB1;
+    background: linear-gradient(to right, #19CFB1 0%, #C978CF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-family: cursive;
+}
+  
+#text {
+    background: #1338CF;
+    background: linear-gradient(to right, #1338CF 0%, #CF70AF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 50px; 
+    margin: 0;
+    font-size: 25px;
+    text-align: center;
+    font-family: cursive;
+}
+
+.home-image {
+    position: absolute;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;    
+    height: 100vh;
+    z-index: -1; 
+    margin-bottom: -10px;
+    background-image: url("./img/foto-mustang-6-shelby-gt500_01.jpg")   
+}
+
+.home-image::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0; left: 0;
+    background-color: rgba(0,0,0,0.7);
+}
+
+blockquote {
+    text-align: center;
+    margin: 0;
+    color: white;
+    padding: 30px 30px 30px 60px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+ 
+blockquote:before {
+    content: "\201C";
+    font-family: Arial;
+    color: #CBDDE7;
+    font-size: 50px;
+    position: absolute;
+    left: 362px;
+    top: 596px;
+    z-index: -1;
+}
+
+blockquote::after {
+    content: "\201D";
+    font-family: Arial;
+    color: #CBDDE7;
+    font-size: 50px;
+    position: absolute;
+    right: 335px;
+    top: 596px;
+    z-index: -1;
+}
+
+blockquote p {
+    font-style: italic;
+    font-size: 20px;
+    margin-top: 130px;  
+}
+
+#about {
+    width: 1300px;
+    height: 687px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+.title {
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 26px;
+    padding-bottom: 20px;
+    font-family: cursive;
+    z-index: -1;
+}
+
+.title::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+
+.title::after {
+    content: "who i am";
+    font-family: 'Ubuntu', sans-serif;
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    color: crimson;
+    padding: 0 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.image {
+    height: 500px;
+    width: 350px;
+    margin-left: 5px;
+    margin-top: 50px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.column-right {
+    width: 55%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    text-align: justify;
+}
+
+.portfolio {
+    color:#fff;
+    background-image: url("./img/Easy-Particle-Animations-In-JavaScript-ab-particles.png");
+    height: 1100px;
+}
+
+#portfolio-content {
+    width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}   
+
+.portfolio-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#title {
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: cursive;
+    z-index: 1;
+}
+
+#title::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+#title::after {
+    content: "what i can";
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    color: crimson;
+    padding: 0 5px;
+    background: #111;
+    transform: translateX(-50%);
+}
+.card {
+    width: 400px;
+    height: 200px;
+    text-align: center;
+    border-radius: 6px;
+    margin: 35px;
+    padding: 50px 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 3px solid crimson;
+}
+
+.card-two {
+    width: 400px;
+    height: 200px;
+    text-align: center;
+    border-radius: 6px;
+    margin: 35px;
+    margin-top: 140px;
+    padding: 50px 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 3px solid crimson;
+}
+
+.name-portfolio {
+    margin-top: -360px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.buttons {
+    margin-top: 345px;
+}
+
+.demo {
+    color: black;
+    display: block;
+    width: 70px;
+    height: 40px;
+    outline: none;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    flex-wrap: nowrap;
+    background-image: linear-gradient(to right, #E55D87 0%, #5FC3E4  51%, #E55D87  100%);
+    border: none;
+    margin-top: 15px;
+    margin-left: 100px;
+    transition: 0.5s;
+    background-size: 200% auto;
+    border: 1px solid crimson;
+}
+
+.source {
+    color: black;
+    display: block;
+    width: 70px;
+    height: 40px;
+    outline: none;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    flex-wrap: nowrap;
+    background-image: linear-gradient(to right, #E55D87 0%, #5FC3E4  51%, #E55D87  100%);
+    border: none;
+    margin-top: -40px;
+    margin-left: 230px;
+    transition: 0.5s;
+    background-size: 200% auto;
+    border: 1px solid crimson;
+}
+
+.demo:hover {
+    background-position: right center;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 6px; 
+}
+
+.source:hover {
+    background-position: right center;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 6px; 
+}
+
+.one-button {
+    color: black;
+    display: block;
+    width: 70px;
+    height: 40px;
+    outline: none;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    flex-wrap: nowrap;
+    background-image: linear-gradient(to right, #E55D87 0%, #5FC3E4  51%, #E55D87  100%);
+    border: none;
+    margin-top: 15px;
+    margin-left: 165px;
+    transition: 0.5s;
+    background-size: 200% auto;
+    border: 1px solid crimson;
+}
+
+.one-button:hover {
+    background-position: right center;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 6px; 
+}
+
+.a {
+    color: black;
+}
+
+.a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.images {
+    width: 500px;
+    height: 300px; 
+    margin-top: -49px;
+    margin-left: -50px;
+    border-radius: 6px;
+} 
+
+#contact {
+    width: 1300px;
+    height: 688px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 115px;
+}
+
+#title-contact::after {
+    content: "contact me";
+    width: 98px;
+}
+
+.column-left {
+    width: 400px;
+    margin-bottom: 65px;
+}
+
+#inscription {
+    text-align: justify;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;  
+}
+
+.icons {
+    margin: 15px 0;
+}
+
+.row {
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+
+.data {
+    margin-left: 20px;
+}
+
+i {
+    font-size: 25px;
+    color: crimson;
+}
+
+.head {
+    font-weight: 500;
+    font-family: cursive;
+}
+
+.subtitle {
+    color: #333;
+    line-height: 1.8;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.text {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 18px;
+    font-family: cursive;
+}
+
+.fields {
+    display: flex;
+}
+
+.field {
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.contact #column-right #textarea {
+    height: 150px;
+    width: 100%;
+}
+
+#name {
+    margin-right: 50px;
+}
+
+.contact #column-right .field input,
+.contact #column-right #textarea textarea {
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.contact #column-right .field input:focus,
+.contact #column-right #textarea textarea:focus{
+    border-color: #b3b3b3;
+}
+
+.contact #column-right #textarea textarea{
+    padding-top: 10px;
+}
+
+.button-send {
+    display: flex;
+    align-items: center;
+}
+
+.button-send button {
+    color: black;
+    display: block;
+    width: 160px;
+    height: 45px;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    flex-wrap: nowrap;
+    background-image: linear-gradient(to right, #E55D87 0%, #5FC3E4  51%, #E55D87  100%);
+    border: none;
+    margin-top: 15px;
+    transition: 0.5s;
+    background-size: 200% auto;
+    border: 1px solid crimson;
+}
+
+.button-send button:hover{
+    background-position: right center;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 6px;   
+}
+
+.footer {
+    background: #111;
+    padding: 15px 23px;
+    color: #fff;
+    text-align: center;
+}
+
+a {
+    color: crimson;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
